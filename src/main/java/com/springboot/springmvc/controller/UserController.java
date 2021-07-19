@@ -21,7 +21,7 @@ public class UserController {
 
     @GetMapping("/hello2")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", new User(name));
+        model.addAttribute("user", new User(name));
         return "welcome";
     }
 }
